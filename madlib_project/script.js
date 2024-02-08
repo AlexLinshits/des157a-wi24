@@ -1,10 +1,18 @@
 (function(){
     'use strict';
     console.log('reading js');
+
+    
     
     const myArt = document.querySelector('#madlib');
     const myForm = document.querySelector('form');
 
+        myForm.style.fontSize = '20pt'
+        myArt.style.fontSize  = '30pt'
+        myForm.style.marginLeft  = '550px'
+        myArt.style.marginLeft  = '300px'
+        myForm.style.border = '3px dashed white'
+        myForm.style.marginRight = '450px'
         myForm.addEventListener ( 'submit', function(event){
         event.preventDefault();
 
@@ -101,7 +109,14 @@
                 document.querySelector('#food9').focus();
             }      
 
-        else { myText = `You typed the words: ${Noun1}, ${Noun2}, ${adj}, ${verb}, ${food1}, ${food2}, ${food3}, ${food4}, ${food5}, ${food6}, ${food7}, ${food8}, ${food9}`;
+        else { myText = `1.Preheat Oven to ${Noun1}. <br> 
+                        2.Whisk 4 ${Noun2} in a bowl before adding${adj}ml of ${verb}. <br>
+                        3.For the dry ingredients combine ${food1} as well as ${food2} alongside ${food3}. <br>
+                        4. Now combine the wet and the dry ingredients before also adding ${food4}. <br>
+                        5.Take out a muffin tray and grease the pans with ${food5}. <br>
+                        6.Garnish with some ${food6} before putting it in the oven for ${food7}. <br>
+                        7.Let cool before enjoying and sharing with your ${food8}.`; 
+           
             document.querySelector('#Noun1').value = '';
             document.querySelector('#Noun2').value = '';
             document.querySelector('#adj').value = '';
@@ -115,21 +130,13 @@
             document.querySelector('#food7').value = '';
             document.querySelector('#food8').value = '';
             document.querySelector('#food9').value = '';
-
             
 
+        
+
         }
-            // if(Noun1 && Noun2 && adj && verb){
-
-            //      myText = `You typed the words: ${Noun1}, ${Noun2}, ${adj}, and ${verb}.` ;
-
-            // } else {
-            //     const myText = "Yo, tell me some shit!"
-            // }
 
         myArt.innerHTML = myText;
-
        })
-
-       
+      
 })();

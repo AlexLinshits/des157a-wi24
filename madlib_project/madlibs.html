@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Cinzel:wght@600&display=swap" rel="stylesheet">
     <title>Build Mad Lib Script</title>
-    <link href="styles.css" rel="stylesheet">
+    <link href="styles-1.css" rel="stylesheet">
     <script src="script.js" defer></script>
 
 </head>
@@ -15,50 +16,60 @@
             <input type="text" id="food9"> Recipe</h1>
     </header>
     <main>
+
         <form id="myform">
+            <!-- <p>1.Preheat Oven to  Degrees</p>
+            <p>2.Whisk 4  before adding ml of  .</p>
+            <p>3.For the dry ingredients combine  as well as  alongside .</p>
+            <p>4.Now combine the  wet and the dry ingredients before also adding.</p>
+            <p>5.Take out the muffin tray and grease the pans with.</p>
+            <p>6.Garnish with some  before putting it in the oven for .</p>
+            <p>7.Let cool before enjoying and sharing with your.</p> -->
 
-
-            <p>1.Preheat Oven to <label for="Noun1"></label>
-            <input type="text" id="Noun1"> Degrees</p>
-
-            <p>2.Whisk 4<label for="Noun2"></label>
-            <input type="text" id="Noun2"> before adding <label for="adj"></label>
-            <input type="text" id="adj">ml of  <label for="verb"></label>
-            <input type="text" id="verb">.</p>
-
-            <p>3.For the dry ingredients combine <label for="food1"></label>
-            <input type="text" id="food1"> as well as <label for="food2"></label>
-            <input type="text" id="food2"> alongside <label for="food7"></label>
-            <input type="text" id="food7">.</p>
-
-            <p>4.Now combine the  wet and the dry ingredients before also adding<label for="food3"></label>
-            <input type="text" id="food3">.</p>
-
-            <p>5.Take out the muffin tray and grease the pans with<label for="food4"></label>
-            <input type="text" id="food4">.</p>
-
-            <p>6.Garnish with some <label for="food5"></label>
-            <input type="text" id="food5"> before putting it in the oven for <label for="food6"></label>
-            <input type="text" id="food6">.</p>
+            <label for="Noun1">Choose a number between 1-1000</label>
+            <input type="text" id="Noun1"><br>
             
-            <p>7.Let cool before enjoying and sharing with your<label for="food8"></label>
-            <input type="text" id="food8">.</p>
-
+            <label for="Noun2">Provided a liquid food</label>
+            <input type="text" id="Noun2"><br>
             
+            <label for="adj">Provide a solid food</label>
+            <input type="text" id="adj"><br>
 
-         
-
+            <label for="verb">Provide a dry food</label>
+            <input type="text" id="verb"><br>
             
-
+            <label for="food1">Provide another dry food</label>
+            <input type="text" id="food1"><br>
             
-
+            <label for="food2">Provide another dry food</label>
+            <input type="text" id="food2"><br>
             
-
+            <label for="food7">Provide a food</label>
+            <input type="text" id="food7"><br>
             
-
+            <label for="food3">Provide a fat</label>
+            <input type="text" id="food3"><br>
             
-
+            <label for="food4">Provide a garnish</label>
+            <input type="text" id="food4"><br>
+            
+            <label for="food5">Provide a time</label>
+            <input type="text" id="food5"><Br>
+           
+            <label for="food6">Provide a noun</label>
+            <input type="text" id="food6"><br>
+            
+            <label for="food8">Provide a number</label>
+            <input type="text" id="food8"><br>
+        
+        
             <input type="submit" value="send" class="button">
+    <section id="overlay" class="hidden">
+        <article>
+            
+        </article>
+    </section>
+        
 
         </form>
         <article id="madlib"></article>
