@@ -12,8 +12,7 @@
 </head>
 <body>
     <header>
-         <h1><label for="food9"></label>
-            <input type="text" id="food9"> Recipe</h1>
+         <h1>Your Own Recipe!</h1>
     </header>
     <main>
 
@@ -25,54 +24,104 @@
             <p>5.Take out the muffin tray and grease the pans with.</p>
             <p>6.Garnish with some  before putting it in the oven for .</p>
             <p>7.Let cool before enjoying and sharing with your.</p> -->
+       <div id="labels">
 
-            <label for="Noun1">Choose a number between 1-1000</label>
-            <input type="text" id="Noun1"><br>
+            <section>
+                <div>
+                    <label for="Noun1">Choose a number between 1-1000</label>
+                    <input type="text" id="Noun1">
+                </div>
+                <div>
+                     <label for="Noun2">Provided a liquid food</label>
+                     <input type="text" id="Noun2">
+                </div>
             
-            <label for="Noun2">Provided a liquid food</label>
-            <input type="text" id="Noun2"><br>
-            
-            <label for="adj">Provide a solid food</label>
-            <input type="text" id="adj"><br>
+            <div>
 
-            <label for="verb">Provide a dry food</label>
-            <input type="text" id="verb"><br>
+                 <label for="adj">Provide a solid food</label>
+                 <input type="text" id="adj">
+            </div>
+
+            <div>
+                <label for="verb">Provide a dry food</label>
+                <input type="text" id="verb">
+            </div>
             
-            <label for="food1">Provide another dry food</label>
-            <input type="text" id="food1"><br>
+            <div>
+                <label for="food1">Provide another dry food</label>
+                <input type="text" id="food1">
+            </div>
+            <div>
+                 <label for="food9">Your Own Recipe!</label>
+                 <input type="text" id="food9">
+            </div>
+                 
+            <div id="button">
+            <input class="open" type="submit" id="send">
+            </div>
+            <div id="missing"></div> 
             
-            <label for="food2">Provide another dry food</label>
-            <input type="text" id="food2"><br>
+            </section>
+
+            <section>
+            <div>
+                <label for="food2">Provide another dry food</label>
+                <input type="text" id="food2">
+            </div>
             
-            <label for="food7">Provide a food</label>
-            <input type="text" id="food7"><br>
+            <div>
+                <label for="food7">Provide a food</label>
+                <input type="text" id="food7">
+            </div>
             
-            <label for="food3">Provide a fat</label>
-            <input type="text" id="food3"><br>
-            
-            <label for="food4">Provide a garnish</label>
-            <input type="text" id="food4"><br>
-            
+            <div>
+                 <label for="food3">Provide a fat</label>
+                  <input type="text" id="food3">
+            </div>
+
+            <div>
+                 <label for="food4">Provide a garnish</label>
+                 <input type="text" id="food4">
+            </div>
+          
+            <div>
             <label for="food5">Provide a time</label>
-            <input type="text" id="food5"><Br>
+            <input type="text" id="food5">
+            </div>
            
+            <div>
             <label for="food6">Provide a noun</label>
-            <input type="text" id="food6"><br>
+            <input type="text" id="food6">
+            </div>
             
-            <label for="food8">Provide a number</label>
-            <input type="text" id="food8"><br>
+            <div>
+                 <label for="food8">Provide a number</label>
+                 <input type="text" id="food8">
+            </div>
+            
+            
+            </section>
+            
+            </div>
+
         
+    
         
-            <input type="submit" value="send" class="button">
-    <section id="overlay" class="hidden">
+    
+    </form>
+
+     <section id="overlay" class="hidden">
         <article>
-            
+           <h1>Create your own Recipe</h1>
+
+           <div id="madlib"></div>
+
+           <button class="close">Exit</button>
         </article>
     </section>
         
 
-        </form>
-        <article id="madlib"></article>
+       
     </main>
     <footer>
     </footer> 
