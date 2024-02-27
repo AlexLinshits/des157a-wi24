@@ -1,0 +1,94 @@
+#myform {
+    display: flex;
+  }
+  
+  body {
+    font-family: 'Roboto Mono', monospace;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  div {
+    padding-top: 20px;
+  }
+  
+  h1 {
+    font-family: 'perfect_dark_brkregular';
+    font-size: 30pt;
+    font-weight: bold;
+    padding-bottom: -10px;
+  }
+  
+  h2 {
+    font-size: 15pt;
+  }
+  
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .showing {
+    visibility: showing;
+    opacity: 1;
+  }
+  
+  #overlay, #overlay1, #overlay2  {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+  }
+  
+  #overlay article, #overlay1 article, #overlay2 article {
+    box-sizing: border-box;
+    background-color:#fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 40vw;
+    height: 65vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  #labels {
+    display: flex;
+    gap: 50px;
+  }
+  
+  section {
+    flex: 1;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  #madlib {
+    line-height: 1.2em;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  #Send, .close {
+    color: black;
+    transition: .3s;
+    padding: 10px;
+    border-style: inset;
+  }
+  
+  #Send:hover, .close:hover {
+    background-color: red;
+    cursor: pointer;
+  }
+
