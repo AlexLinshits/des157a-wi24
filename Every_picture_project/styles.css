@@ -8,6 +8,7 @@
     margin: auto;
     text-align: center;
     margin-top: 100px;
+    background-color: antiquewhite;
   }
   
   div {
@@ -92,3 +93,15 @@
     cursor: pointer;
   }
 
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #000000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.hidden:hover {
+    cursor: pointer;
+}
