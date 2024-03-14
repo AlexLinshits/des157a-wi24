@@ -2,6 +2,23 @@
     'use strict'
     console.log('reading JS');
 
+    document.querySelector('.open').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('overlay').className = 'showing';
+    });
+
+    document.querySelector('.close').addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('overlay').className = 'hidden';
+    });
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            document.getElementById('overlay').className = 'hidden';
+        }
+    });
+
+})();
     // //This gets the current player: 
     // gameData.players[gameData.index]
 
@@ -28,10 +45,11 @@
     const game = document.querySelector('#game');
     const score = document.querySelector('#score');
     const actionArea = document.querySelector('#actions');
+    
 
     const gameData = {
-        dice: ['images/1die.jpg', 'images/2die.jpg', 'images/3die.jpg', 'images/4die.jpg', 'images/5die.jpg', 'images/6die.jpg'],
-        players: ['player 1', 'player 2'],
+        dice: ['images/1die.png', 'images/2die.png', 'images/3die.png', 'images/4die.png', 'images/5die.png', 'images/6die.png'],
+        players: ['Player 1', 'Player 2'],
         score: [0, 0],
         roll1: 0,
         roll2: 0,
@@ -44,7 +62,7 @@
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
         gameControl.innerHTML = '<h2>The Game Has Started</h2>';
-        gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+        gameControl.innerHTML += '<button id="quit">Wanna <br> Quit?</button>';
         document.getElementById('quit').addEventListener("click", function(){
             location.reload();
         })
@@ -79,7 +97,7 @@
         // if either die is a 1...
         else if(gameData.roll1 === 1 || gameData.roll2 === 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<p>Sorry, one of your rolls was a one, switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<p>ONE AND OUT! switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
         }
         // if neither die is a 1...
@@ -121,4 +139,3 @@
 
 
 
-})();

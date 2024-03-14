@@ -6,7 +6,15 @@ body {
 }
 
 button { 
-    padding: 10px;
+    display: inline-block;
+    background-color: hsl(120, 78%, 14%);
+    padding: 20px;
+    width: 200px;
+    color: #ffffff;
+    text-align: center;
+    border: 4px double #cccccc; 
+    border-radius: 10px; 
+    font-size: 28px;
 }
 
 div {
@@ -14,6 +22,58 @@ div {
 }
 
 
-body {
-background-image:url(casino_table.svg) ;
+p {
+    color: white    ;
+}
+
+H1,H2 {
+    color: white    ;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+   
+}
+
+.showing {
+    visibility: showing;
+    opacity: 1; 
+
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color:#157022;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: scroll;
+    
+}
+
+.container {
+    position: relative;
+}
+
+.bottom-left{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
 }
