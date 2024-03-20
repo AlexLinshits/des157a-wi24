@@ -45,6 +45,10 @@
     const game = document.querySelector('#game');
     const score = document.querySelector('#score');
     const actionArea = document.querySelector('#actions');
+    const oneSound = new Audio('sounds/oneroll.m4a');
+    const snakeEyes = new Audio('sounds/snakeeyes.m4a');
+    const endGame = new Audio('sounds/endgame.m4a');
+    const casinoSounds = new Audio ('sounds/CasinoSounds.m4a');
     
 
     const gameData = {
@@ -66,6 +70,7 @@
         document.getElementById('quit').addEventListener("click", function(){
             location.reload();
         })
+        casinoSounds.play();
         setUpTurn();
     })
 
@@ -92,13 +97,15 @@
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             showCurrentScore();
-            setTimeout(setUpTurn, 2000);
+            setTimeout(setUpTurn, 4000);
+            snakeEyes.play();
         }
         // if either die is a 1...
         else if(gameData.roll1 === 1 || gameData.roll2 === 1){
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML += `<p>ONE AND OUT! switching to ${gameData.players[gameData.index]}</p>`;
-            setTimeout(setUpTurn, 2000);
+            setTimeout(setUpTurn, 4000);
+            oneSound.play();
         }
         // if neither die is a 1...
         else {
@@ -120,7 +127,7 @@
         function checkWinningCondition(){
             if(gameData.score[gameData.index] > gameData.gameEnd){
                 score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points! </h2>`;
-
+                endGame.play();
                 actionArea.innerHTML = '';
                 document.getElementById('quit').innerHTML = "Start a New Game?";
             }
